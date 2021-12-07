@@ -20,8 +20,6 @@ header {
 
 nav {
   display: flex;
-  /* Justify content right to make links appear on the right */
-  justify-content: right;
   background-color: #d8a47f;
 }
 
@@ -32,7 +30,22 @@ nav a {
   text-align: center;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: left;
+}
+
 footer {
+  width: 100%;
+  bottom: 0;
   padding: 20px;
   text-align: center;
   background: #13293d;
@@ -40,44 +53,40 @@ footer {
   margin-top: auto;
 }
 
-.product {
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 50px;
   display: flex;
-  width: 90%;
-  margin: 1% auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-.product button {
-  font-size: 150%;
+/* TODO: Add properties to the cards to achieve the required look */
+.card {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin: 20px;
+  flex: 0 0 300px;
 }
 
-.product-slideshow {
-  display: flex;
-  /* This makes the button small and centered */
-  align-items: center;
+.card header {
+  padding: 20px;
 }
 
-.product-image {
+.card p {
+  text-align: center;
+}
+
+.card img {
   width: 100%;
-}
-
-.product-details {
-  margin-left: 3%;
-  flex: 0 0 60%;
 }
 
 @media screen and (max-width: 768px) {
   main,
-  nav,
-  .product {
+  nav {
     flex-direction: column;
-  }
-
-  .product-slideshow button {
-    /* Removes the slideshow buttons from the document flow */
-    display: none;
-  }
-
-  .product-details {
-    margin-left: 0;
   }
 }
