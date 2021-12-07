@@ -11,6 +11,9 @@ main {
   display: flex;
   /* Added flex-wrap to stop page overflow */
   flex-wrap: wrap;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
   margin-top: 2%;
 }
 
