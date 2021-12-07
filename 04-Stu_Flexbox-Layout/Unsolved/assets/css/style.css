@@ -9,6 +9,8 @@ body {
 
 main {
   display: flex;
+  /* Added flex-wrap to stop page overflow */
+  flex-wrap: wrap;
   margin-top: 2%;
 }
 
